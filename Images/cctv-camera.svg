@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f0f5ff"/>
+      <stop offset="100%" stop-color="#e8f5e9"/>
+    </linearGradient>
+    <linearGradient id="camBody" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#37474f"/>
+      <stop offset="100%" stop-color="#263238"/>
+    </linearGradient>
+    <linearGradient id="lens" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1a237e"/>
+      <stop offset="50%" stop-color="#0d47a1"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="domeGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#455a64"/>
+      <stop offset="100%" stop-color="#263238"/>
+    </linearGradient>
+    <radialGradient id="lensShine" cx="35%" cy="35%">
+      <stop offset="0%" stop-color="#64b5f6" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#1565c0" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow2">
+      <feDropShadow dx="3" dy="4" stdDeviation="6" flood-opacity="0.25"/>
+    </filter>
+    <filter id="glow2">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="300" fill="url(#bgGrad)" rx="16"/>
+
+  <!-- Ceiling/wall surface -->
+  <rect x="0" y="0" width="400" height="60" fill="#eceff1" rx="0"/>
+  <rect x="0" y="56" width="400" height="8" fill="#cfd8dc"/>
+
+  <!-- Mounting bracket arm -->
+  <rect x="186" y="56" width="28" height="40" rx="6" fill="#546e7a" filter="url(#shadow2)"/>
+  <rect x="184" y="52" width="32" height="14" rx="4" fill="#607d8b"/>
+  <!-- Mounting screws -->
+  <circle cx="192" cy="59" r="4" fill="#78909c"/>
+  <circle cx="208" cy="59" r="4" fill="#78909c"/>
+  <line x1="192" y1="57" x2="192" y2="61" stroke="#546e7a" stroke-width="1.5"/>
+  <line x1="190" y1="59" x2="194" y2="59" stroke="#546e7a" stroke-width="1.5"/>
+  <line x1="208" y1="57" x2="208" y2="61" stroke="#546e7a" stroke-width="1.5"/>
+  <line x1="206" y1="59" x2="210" y2="59" stroke="#546e7a" stroke-width="1.5"/>
+
+  <!-- Pivot joint -->
+  <circle cx="200" cy="100" r="14" fill="#455a64" filter="url(#shadow2)"/>
+  <circle cx="200" cy="100" r="9" fill="#546e7a"/>
+  <circle cx="200" cy="100" r="5" fill="#607d8b"/>
+
+  <!-- Dome camera housing (main body) -->
+  <ellipse cx="200" cy="175" rx="80" ry="55" fill="url(#domeGrad)" filter="url(#shadow2)"/>
+  <!-- Dome top flange -->
+  <rect x="152" y="112" width="96" height="18" rx="9" fill="#546e7a"/>
+  <ellipse cx="200" cy="121" rx="48" ry="9" fill="#607d8b"/>
+
+  <!-- Cable going up -->
+  <path d="M196 100 Q190 108 192 118" stroke="#37474f" stroke-width="4" fill="none" stroke-linecap="round"/>
+
+  <!-- Dome glass / lens area -->
+  <ellipse cx="200" cy="180" rx="48" ry="33" fill="#1a237e" opacity="0.9"/>
+  <ellipse cx="200" cy="180" rx="48" ry="33" fill="url(#lens)"/>
+  <ellipse cx="200" cy="180" rx="48" ry="33" fill="url(#lensShine)" opacity="0.6"/>
+
+  <!-- Inner lens elements -->
+  <ellipse cx="200" cy="180" rx="32" ry="22" fill="#0d47a1" stroke="#1565c0" stroke-width="1.5"/>
+  <ellipse cx="200" cy="180" rx="20" ry="14" fill="#0a3472" stroke="#1976d2" stroke-width="1"/>
+  <ellipse cx="200" cy="180" rx="11" ry="8" fill="#051e42"/>
+  <!-- Lens center highlight -->
+  <ellipse cx="195" cy="175" rx="5" ry="4" fill="#90caf9" opacity="0.4"/>
+  <ellipse cx="192" cy="173" rx="2" ry="1.5" fill="white" opacity="0.5"/>
+
+  <!-- IR LEDs ring around lens -->
+  <g opacity="0.85">
+    <circle cx="160" cy="165" r="4" fill="#ef5350"/>
+    <circle cx="160" cy="165" r="3" fill="#ff8a80" filter="url(#glow2)"/>
+    <circle cx="240" cy="165" r="4" fill="#ef5350"/>
+    <circle cx="240" cy="165" r="3" fill="#ff8a80" filter="url(#glow2)"/>
+    <circle cx="162" cy="194" r="4" fill="#ef5350"/>
+    <circle cx="162" cy="194" r="3" fill="#ff8a80" filter="url(#glow2)"/>
+    <circle cx="238" cy="194" r="4" fill="#ef5350"/>
+    <circle cx="238" cy="194" r="3" fill="#ff8a80" filter="url(#glow2)"/>
+    <circle cx="174" cy="153" r="4" fill="#ef5350"/>
+    <circle cx="174" cy="153" r="3" fill="#ff8a80" filter="url(#glow2)"/>
+    <circle cx="226" cy="153" r="4" fill="#ef5350"/>
+    <circle cx="226" cy="153" r="3" fill="#ff8a80" filter="url(#glow2)"/>
+    <circle cx="175" cy="207" r="4" fill="#ef5350"/>
+    <circle cx="175" cy="207" r="3" fill="#ff8a80" filter="url(#glow2)"/>
+    <circle cx="225" cy="207" r="4" fill="#ef5350"/>
+    <circle cx="225" cy="207" r="3" fill="#ff8a80" filter="url(#glow2)"/>
+  </g>
+
+  <!-- Status indicator LED -->
+  <circle cx="218" cy="132" r="5" fill="#4caf50" filter="url(#glow2)"/>
+  <circle cx="218" cy="132" r="3" fill="#81c784"/>
+
+  <!-- Brand label -->
+  <rect x="168" y="228" width="64" height="14" rx="3" fill="#455a64"/>
+  <text x="200" y="239" text-anchor="middle" font-family="Arial" font-size="8" fill="#b0bec5" font-weight="bold" letter-spacing="1">HIKVISION</text>
+
+  <!-- Field of view lines -->
+  <line x1="200" y1="200" x2="80" y2="290" stroke="#0057ff" stroke-width="1" stroke-dasharray="6,4" opacity="0.3"/>
+  <line x1="200" y1="200" x2="320" y2="290" stroke="#0057ff" stroke-width="1" stroke-dasharray="6,4" opacity="0.3"/>
+  <path d="M80,290 Q200,265 320,290" stroke="#0057ff" stroke-width="1" stroke-dasharray="6,4" fill="none" opacity="0.2"/>
+
+  <!-- Monitor/NVR screen (small, background right) -->
+  <rect x="310" y="170" width="72" height="52" rx="5" fill="#263238" filter="url(#shadow2)"/>
+  <rect x="313" y="173" width="66" height="42" rx="3" fill="#1a1a2e"/>
+  <!-- Screen content - mini feed -->
+  <rect x="315" y="175" width="30" height="19" rx="1" fill="#0d1b4b" stroke="#0057ff" stroke-width="0.5"/>
+  <rect x="347" y="175" width="30" height="19" rx="1" fill="#0d2a1a" stroke="#0ea347" stroke-width="0.5"/>
+  <rect x="315" y="196" width="30" height="17" rx="1" fill="#1a0d2a" stroke="#7c3aed" stroke-width="0.5"/>
+  <rect x="347" y="196" width="30" height="17" rx="1" fill="#2a1a0d" stroke="#ff9900" stroke-width="0.5"/>
+  <!-- Screen mini camera icons -->
+  <text x="330" y="188" text-anchor="middle" font-size="10" fill="#4a8de8">⏺</text>
+  <text x="362" y="188" text-anchor="middle" font-size="10" fill="#4ae88a">⏺</text>
+  <!-- NVR stand -->
+  <rect x="336" y="222" width="20" height="6" rx="2" fill="#455a64"/>
+
+  <!-- Hikvision red corner branding tag -->
+  <path d="M15,15 L15,50 L50,15" fill="#c62828" opacity="0.8"/>
+  <text x="18" y="38" font-family="Arial" font-size="8" fill="white" font-weight="bold" transform="rotate(-45,18,38)">HD</text>
+
+  <!-- Wifi signal (indicating wireless monitoring) -->
+  <g transform="translate(340, 130)" opacity="0.7">
+    <path d="M20,30 Q20,10 20,10" stroke="#4caf50" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+    <path d="M11,24 Q20,8 29,24" stroke="#4caf50" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+    <path d="M4,18 Q20,0 36,18" stroke="#4caf50" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+    <circle cx="20" cy="32" r="3" fill="#4caf50"/>
+  </g>
+</svg>
